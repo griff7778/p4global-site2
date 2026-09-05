@@ -230,6 +230,29 @@
     display:flex;justify-content:space-between;font-size:13px;color:rgba(255,255,255,.45);flex-wrap:wrap;gap:10px;
   }
   @media(max-width:860px){.foot-grid{grid-template-columns:1fr 1fr;}}
+
+  /* ---------- Quote form ---------- */
+  .quote-section{background:#fff;border-top:1px solid var(--line);}
+  .quote-wrap{
+    display:grid;grid-template-columns:0.9fr 1.1fr;gap:56px;align-items:start;
+  }
+  .quote-form{
+    background:var(--paper);border:1px solid var(--line);padding:40px;
+  }
+  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+  .form-group{margin-bottom:20px;}
+  .form-group label{display:block;font-size:13px;font-weight:700;color:var(--navy);margin-bottom:7px;}
+  .form-group input,.form-group select,.form-group textarea{
+    width:100%;padding:12px 14px;font-family:'Manrope',sans-serif;font-size:15px;
+    border:1.5px solid var(--line);border-radius:2px;background:#fff;color:var(--ink);
+  }
+  .form-group input:focus,.form-group select:focus,.form-group textarea:focus{
+    outline:none;border-color:var(--teal);
+  }
+  .form-group textarea{resize:vertical;min-height:110px;}
+  .quote-form .btn{width:100%;justify-content:center;font-size:16px;padding:15px 26px;}
+  .form-note{font-size:13px;color:var(--muted);margin-top:14px;}
+  @media(max-width:860px){.quote-wrap{grid-template-columns:1fr;} .form-row{grid-template-columns:1fr;}}
 </style>
 </head>
 <body>
@@ -456,21 +479,68 @@
     </div>
   </section>
 
-  <!-- CTA -->
-  <section class="cta-section">
-    <div class="wrap">
-      <div class="eyebrow" style="text-align:center;">Let's Talk Packaging</div>
-      <h2>Have a product that needs the right bag?</h2>
-      <p class="lede">Tell us what you're packaging and we'll put together options — stock or custom — with realistic lead times and pricing.</p>
-      <div class="hero-ctas">
-        <a href="#contact" class="btn btn-primary">Request a Quote</a>
+  <!-- QUOTE FORM -->
+  <section id="contact" class="quote-section">
+    <div class="wrap quote-wrap">
+      <div>
+        <div class="eyebrow">Let's Talk Packaging</div>
+        <h2>Request a quote.</h2>
+        <p class="lede" style="margin-top:18px;">Tell us what you're packaging — stock or custom, including our 10000 OTR bags — and we'll follow up with options and realistic lead times.</p>
       </div>
+
+      <form class="quote-form" action="https://formsubmit.co/sales@p4globalinc.com" method="POST">
+        <input type="hidden" name="_subject" value="New quote request — p4globalinc.com">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="q-name">Full Name</label>
+            <input type="text" id="q-name" name="Name" required>
+          </div>
+          <div class="form-group">
+            <label for="q-company">Company</label>
+            <input type="text" id="q-company" name="Company">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="q-email">Email</label>
+            <input type="email" id="q-email" name="Email" required>
+          </div>
+          <div class="form-group">
+            <label for="q-phone">Phone</label>
+            <input type="tel" id="q-phone" name="Phone">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="q-product">Product of Interest</label>
+          <select id="q-product" name="Product of Interest">
+            <option>10000 OTR Bags</option>
+            <option>Taribo (Fresh Produce)</option>
+            <option>Plastobar (Dairy)</option>
+            <option>Plastobar (Meat, Poultry & Seafood)</option>
+            <option>Bags & Pouches (General)</option>
+            <option>Rollstock</option>
+            <option>Reclosable Packaging</option>
+            <option>Custom / Prototype Development</option>
+            <option>Not sure yet</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="q-message">Tell us about your project</label>
+          <textarea id="q-message" name="Message" placeholder="Product, volume, timeline, target price if known..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send Inquiry</button>
+        <p class="form-note">Submitting this form sends your inquiry directly to our sales team at sales@p4globalinc.com.</p>
+      </form>
     </div>
   </section>
 
 </main>
 
-<footer id="contact">
+<footer>
   <div class="wrap">
     <div class="foot-grid">
       <div>
@@ -500,7 +570,7 @@
       </div>
       <div class="foot-col">
         <h4>Get a Quote</h4>
-        <a href="mailto:info@p4globalinc.com?subject=Quote%20Request">Email Us →</a>
+        <a href="#contact">Fill Out the Form →</a>
       </div>
     </div>
     <div class="foot-bottom">
