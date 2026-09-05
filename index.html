@@ -189,14 +189,21 @@
   }
   .market-tile{
     background:var(--paper);padding:30px 26px;min-height:168px;
-    display:flex;flex-direction:column;justify-content:space-between;
+    display:flex;flex-direction:column;justify-content:flex-start;gap:10px;
     transition:background .15s ease;
   }
+  .market-tile .icon{width:26px;height:26px;color:var(--teal);}
   .market-tile:hover{background:#fff;}
   .market-tile .tag{font-size:13px;font-weight:700;color:var(--teal);}
-  .market-tile h3{margin-top:10px;}
+  .market-tile h3{margin-top:0;}
   @media(max-width:860px){.markets-grid{grid-template-columns:1fr 1fr;}}
   @media(max-width:560px){.markets-grid{grid-template-columns:1fr;}}
+
+  .gallery-grid{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:20px;
+  }
+  .gallery-item{border-radius:2px;width:100%;height:auto;box-shadow:0 10px 24px rgba(20,33,61,.10);}
+  @media(max-width:860px){.gallery-grid{grid-template-columns:1fr 1fr;}}
 
   /* ---------- Sustainability band ---------- */
   .band{
@@ -279,6 +286,7 @@
       <a href="#best-sellers">Best Sellers</a>
       <a href="#capabilities">Capabilities</a>
       <a href="#markets">Markets</a>
+      <a href="#gallery">Gallery</a>
       <a href="#sustainability">Sustainability</a>
       <a href="#contact">Contact</a>
     </div>
@@ -450,14 +458,65 @@
           <div class="eyebrow">Markets</div>
           <h2>Built for the shelf you're competing on.</h2>
         </div>
+        <p class="lede">From snack aisles to craft taprooms, we package for brands that live on crowded shelves — wherever your category shows up.</p>
       </div>
       <div class="markets-grid">
-        <div class="market-tile"><span class="tag">Food</span><h3>Snack, frozen &amp; bakery</h3></div>
-        <div class="market-tile"><span class="tag">Pet Care</span><h3>Pet food &amp; treats</h3></div>
-        <div class="market-tile"><span class="tag">Nutraceuticals</span><h3>Supplements &amp; wellness</h3></div>
-        <div class="market-tile"><span class="tag">Fresh Produce</span><h3>Shelf-life extension</h3></div>
-        <div class="market-tile"><span class="tag">Consumer Goods</span><h3>Household &amp; retail</h3></div>
-        <div class="market-tile"><span class="tag">Industrial</span><h3>Specialty &amp; bulk formats</h3></div>
+        <div class="market-tile">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 3h10l1 4H6l1-4Z"/><path d="M5 7h14l-1.2 12.2A2 2 0 0 1 15.8 21H8.2a2 2 0 0 1-2-1.8L5 7Z"/><path d="M9 11c1.5 1 4.5 1 6 0"/></svg>
+          <span class="tag">Snack Food</span><h3>Chips, crackers &amp; bakery</h3>
+        </div>
+        <div class="market-tile">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 5a2 2 0 1 1 4 0v1H8V5Z"/><path d="M6 9a2 2 0 1 1 0-4"/><path d="M18 9a2 2 0 1 0 0-4"/><path d="M6 9c0 4 2.5 6 6 6s6-2 6-6"/><path d="M12 15v4"/></svg>
+          <span class="tag">Pet</span><h3>Pet food &amp; treats</h3>
+        </div>
+        <div class="market-tile">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="8" width="18" height="8" rx="4" transform="rotate(-30 12 12)"/><path d="M9 15 15 9" stroke-dasharray="0.5 3"/></svg>
+          <span class="tag">Nutraceutical</span><h3>Supplements &amp; wellness</h3>
+        </div>
+        <div class="market-tile">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3c3 3 5 6 5 9a5 5 0 0 1-10 0c0-3 2-6 5-9Z"/></svg>
+          <span class="tag">Produce</span><h3>Shelf-life extension</h3>
+        </div>
+        <div class="market-tile">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 13c4-5 14-5 18 0" /><path d="M4 13l1 6h14l1-6"/><circle cx="9" cy="16" r=".6" fill="currentColor" stroke="none"/><circle cx="13" cy="17" r=".6" fill="currentColor" stroke="none"/><circle cx="16" cy="15" r=".6" fill="currentColor" stroke="none"/></svg>
+          <span class="tag">Meat &amp; Seafood</span><h3>Protein &amp; high-barrier film</h3>
+        </div>
+        <div class="market-tile">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 10 12 4l9 6-9 6-9-6Z"/><circle cx="7" cy="10" r=".7" fill="currentColor" stroke="none"/></svg>
+          <span class="tag">Cheese</span><h3>Wedges, blocks &amp; shreds</h3>
+        </div>
+        <div class="market-tile">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 8h13v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V8Z"/><path d="M17 9h2a2 2 0 0 1 0 4h-2"/><path d="M8 3c0 1-1 1-1 2M12 3c0 1-1 1-1 2"/></svg>
+          <span class="tag">Coffee</span><h3>Beans, grounds &amp; pods</h3>
+        </div>
+        <div class="market-tile">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 2h6v4l2 3v9a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2v-9l2-3V2Z"/><path d="M7 12h10"/></svg>
+          <span class="tag">Craft Beer &amp; Distillery</span><h3>Labels &amp; secondary packaging</h3>
+        </div>
+        <div class="market-tile">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="9" cy="9" r="4"/><circle cx="15" cy="15" r="4"/></svg>
+          <span class="tag">Confectionery</span><h3>Candy &amp; sweets</h3>
+        </div>
+      </div>
+      <p class="form-note" style="margin-top:22px;">Don't see your category? We can't list every one — if it's flexible packaging, there's a good chance we've already sourced something close to it.</p>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery" style="background:#fff;border-top:1px solid var(--line);">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">A Look at the Work</div>
+          <h2>Packaging formats we build most.</h2>
+        </div>
+        <p class="lede">Renderings of our core formats — swap in real product photography any time once you have shots ready.</p>
+      </div>
+      <div class="gallery-grid">
+        <svg viewBox="0 0 260 300" class="gallery-item"><rect width="260" height="300" fill="#F0EFEB"/><path d="M70 60 Q65 30 110 30 L170 30 Q205 30 205 65 L205 250 Q205 275 175 275 L100 275 Q70 275 70 245 Z" fill="#1F7A8C"/><path d="M70 60 Q65 30 110 30 L170 30 Q205 30 205 65 L205 95 L70 95Z" fill="#14213D" opacity=".3"/><rect x="95" y="115" width="80" height="34" rx="3" fill="#fff" opacity=".9"/></svg>
+        <svg viewBox="0 0 260 300" class="gallery-item"><rect width="260" height="300" fill="#F0EFEB"/><path d="M55 90 Q50 55 100 55 L165 55 Q205 55 205 95 L205 245 Q205 270 178 270 L82 270 Q55 270 55 245 Z" fill="#4FD8E0"/><rect x="55" y="150" width="150" height="16" fill="#14213D" opacity=".85"/><circle cx="130" cy="90" r="18" fill="#fff" opacity=".9"/></svg>
+        <svg viewBox="0 0 260 300" class="gallery-item"><rect width="260" height="300" fill="#F0EFEB"/><rect x="60" y="40" width="140" height="220" rx="6" fill="#14213D"/><rect x="60" y="40" width="140" height="60" rx="6" fill="#1F7A8C"/><rect x="80" y="130" width="100" height="10" fill="#fff" opacity=".8"/><rect x="80" y="150" width="70" height="10" fill="#fff" opacity=".5"/></svg>
+        <svg viewBox="0 0 260 300" class="gallery-item"><rect width="260" height="300" fill="#F0EFEB"/><path d="M80 250 L80 110 Q80 90 100 90 L160 90 Q180 90 180 110 L180 250 Z" fill="#1F7A8C"/><rect x="80" y="90" width="100" height="26" fill="#0F1930" opacity=".4"/><rect x="95" y="150" width="70" height="45" fill="#fff" opacity=".85"/></svg>
       </div>
     </div>
   </section>
