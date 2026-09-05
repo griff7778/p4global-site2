@@ -196,6 +196,16 @@
   .market-tile:hover{background:#fff;}
   .market-tile .tag{font-size:13px;font-weight:700;color:var(--teal);}
   .market-tile h3{margin-top:0;}
+  .market-tile--photo{
+    background-size:cover;background-position:center;padding:0;
+    min-height:200px;position:relative;justify-content:flex-end;
+  }
+  .market-tile-overlay{
+    background:linear-gradient(180deg,rgba(20,33,61,0) 0%,rgba(20,33,61,.85) 85%);
+    padding:20px;
+  }
+  .market-tile-overlay .tag{color:var(--aqua);}
+  .market-tile-overlay h3{color:#fff;margin-top:4px;}
   @media(max-width:860px){.markets-grid{grid-template-columns:1fr 1fr;}}
   @media(max-width:560px){.markets-grid{grid-template-columns:1fr;}}
 
@@ -461,44 +471,35 @@
         <p class="lede">From snack aisles to craft taprooms, we package for brands that live on crowded shelves — wherever your category shows up.</p>
       </div>
       <div class="markets-grid">
-        <div class="market-tile">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 3h10l1 4H6l1-4Z"/><path d="M5 7h14l-1.2 12.2A2 2 0 0 1 15.8 21H8.2a2 2 0 0 1-2-1.8L5 7Z"/><path d="M9 11c1.5 1 4.5 1 6 0"/></svg>
-          <span class="tag">Snack Food</span><h3>Chips, crackers &amp; bakery</h3>
+        <div class="market-tile market-tile--photo" style="background-image:url('https://images.unsplash.com/photo-1759465201025-0f4a876efa47?fm=jpg&amp;q=70&amp;w=600&amp;fit=crop')">
+          <div class="market-tile-overlay"><span class="tag">Snack Food</span><h3>Chips, crackers &amp; bakery</h3></div>
         </div>
-        <div class="market-tile">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 5a2 2 0 1 1 4 0v1H8V5Z"/><path d="M6 9a2 2 0 1 1 0-4"/><path d="M18 9a2 2 0 1 0 0-4"/><path d="M6 9c0 4 2.5 6 6 6s6-2 6-6"/><path d="M12 15v4"/></svg>
-          <span class="tag">Pet</span><h3>Pet food &amp; treats</h3>
+        <div class="market-tile market-tile--photo" style="background-image:url('https://images.unsplash.com/photo-1535320730793-87242ae1f53d?fm=jpg&amp;q=70&amp;w=600&amp;fit=crop')">
+          <div class="market-tile-overlay"><span class="tag">Pet</span><h3>Pet food &amp; treats</h3></div>
         </div>
-        <div class="market-tile">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="8" width="18" height="8" rx="4" transform="rotate(-30 12 12)"/><path d="M9 15 15 9" stroke-dasharray="0.5 3"/></svg>
-          <span class="tag">Nutraceutical</span><h3>Supplements &amp; wellness</h3>
+        <div class="market-tile market-tile--photo" style="background-image:url('https://images.unsplash.com/photo-1670850756917-8ed6c2a71e12?fm=jpg&amp;q=70&amp;w=600&amp;fit=crop')">
+          <div class="market-tile-overlay"><span class="tag">Nutraceutical</span><h3>Supplements &amp; wellness</h3></div>
         </div>
-        <div class="market-tile">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3c3 3 5 6 5 9a5 5 0 0 1-10 0c0-3 2-6 5-9Z"/></svg>
-          <span class="tag">Produce</span><h3>Shelf-life extension</h3>
+        <div class="market-tile market-tile--photo" style="background-image:url('https://images.unsplash.com/photo-1753172433718-d0c2a99443d8?fm=jpg&amp;q=70&amp;w=600&amp;fit=crop')">
+          <div class="market-tile-overlay"><span class="tag">Produce</span><h3>Shelf-life extension</h3></div>
         </div>
-        <div class="market-tile">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 13c4-5 14-5 18 0" /><path d="M4 13l1 6h14l1-6"/><circle cx="9" cy="16" r=".6" fill="currentColor" stroke="none"/><circle cx="13" cy="17" r=".6" fill="currentColor" stroke="none"/><circle cx="16" cy="15" r=".6" fill="currentColor" stroke="none"/></svg>
-          <span class="tag">Meat &amp; Seafood</span><h3>Protein &amp; high-barrier film</h3>
+        <div class="market-tile market-tile--photo" style="background-image:url('https://images.unsplash.com/photo-1754587489041-9fc8301f4c98?fm=jpg&amp;q=70&amp;w=600&amp;fit=crop')">
+          <div class="market-tile-overlay"><span class="tag">Meat &amp; Seafood</span><h3>Protein &amp; high-barrier film</h3></div>
         </div>
-        <div class="market-tile">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 10 12 4l9 6-9 6-9-6Z"/><circle cx="7" cy="10" r=".7" fill="currentColor" stroke="none"/></svg>
-          <span class="tag">Cheese</span><h3>Wedges, blocks &amp; shreds</h3>
+        <div class="market-tile market-tile--photo" style="background-image:url('https://images.unsplash.com/photo-1752253509987-f92fd1cf4a78?fm=jpg&amp;q=70&amp;w=600&amp;fit=crop')">
+          <div class="market-tile-overlay"><span class="tag">Cheese</span><h3>Wedges, blocks &amp; shreds</h3></div>
         </div>
-        <div class="market-tile">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 8h13v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V8Z"/><path d="M17 9h2a2 2 0 0 1 0 4h-2"/><path d="M8 3c0 1-1 1-1 2M12 3c0 1-1 1-1 2"/></svg>
-          <span class="tag">Coffee</span><h3>Beans, grounds &amp; pods</h3>
+        <div class="market-tile market-tile--photo" style="background-image:url('https://images.unsplash.com/photo-1690983325192-a4c13c2e331d?fm=jpg&amp;q=70&amp;w=600&amp;fit=crop')">
+          <div class="market-tile-overlay"><span class="tag">Coffee</span><h3>Beans, grounds &amp; pods</h3></div>
         </div>
-        <div class="market-tile">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 2h6v4l2 3v9a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2v-9l2-3V2Z"/><path d="M7 12h10"/></svg>
-          <span class="tag">Craft Beer &amp; Distillery</span><h3>Labels &amp; secondary packaging</h3>
+        <div class="market-tile market-tile--photo" style="background-image:url('https://images.unsplash.com/photo-1631878957610-a2b25427fe4d?fm=jpg&amp;q=70&amp;w=600&amp;fit=crop')">
+          <div class="market-tile-overlay"><span class="tag">Craft Beer &amp; Distillery</span><h3>Labels &amp; secondary packaging</h3></div>
         </div>
-        <div class="market-tile">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="9" cy="9" r="4"/><circle cx="15" cy="15" r="4"/></svg>
-          <span class="tag">Confectionery</span><h3>Candy &amp; sweets</h3>
+        <div class="market-tile market-tile--photo" style="background-image:url('https://images.unsplash.com/photo-1687499466474-df90c4d7a54a?fm=jpg&amp;q=70&amp;w=600&amp;fit=crop')">
+          <div class="market-tile-overlay"><span class="tag">Confectionery</span><h3>Candy &amp; sweets</h3></div>
         </div>
       </div>
-      <p class="form-note" style="margin-top:22px;">Don't see your category? We can't list every one — if it's flexible packaging, there's a good chance we've already sourced something close to it.</p>
+      <p class="form-note" style="margin-top:22px;">Don't see your category? We can't list every one — if it's flexible packaging, there's a good chance we've already sourced something close to it. Photos above are stock imagery (Unsplash) standing in until we drop in your real product shots.</p>
     </div>
   </section>
 
